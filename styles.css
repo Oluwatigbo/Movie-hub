@@ -1,0 +1,159 @@
+/* Custom Styles for Movie Hub - Mobile First, with Bootstrap Integration */
+/* Typography: Poppins for headings, Open Sans for body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #2C3E50;
+  background-color: #F8F9FA;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #34495E;
+  color: #ECF0F1;
+}
+
+body.dark-mode .bg-light {
+  background-color: #2C3E50 !important;
+}
+
+body.dark-mode .text-muted {
+  color: #BDC3C7 !important;
+}
+
+/* Header */
+header {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Cards: Dynamic Content */
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+body.dark-mode .card-title {
+  color: #ECF0F1;
+}
+
+/* Genre Buttons */
+.btn-genre {
+  background-color: #4ECDC4;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-genre:hover,
+.btn-genre:focus {
+  background-color: #FF6B6B;
+  outline: 2px solid #FF6B6B;
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+#detailsModal .modal-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Loading & Error */
+#loadingSpinner {
+  animation: fadeIn 0.5s ease;
+}
+
+#errorSection {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Accessibility: Focus Styles */
+.btn:focus,
+.card:focus-within,
+input:focus {
+  outline: 2px solid #4ECDC4;
+  outline-offset: 2px;
+}
+
+/* Responsive Overrides */
+@media (min-width: 900px) {
+  .card-img-top {
+    height: 300px;
+  }
+}
+
+/* Utility: Visually Hidden for SR */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.1);
+}
