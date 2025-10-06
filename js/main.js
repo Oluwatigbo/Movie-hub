@@ -40,6 +40,7 @@ const elements = {
   exportWatchlist: document.getElementById('exportWatchlist'),
   genreButtons: document.getElementById('genreButtons'),
   trendingGrid: document.getElementById('trendingGrid'),
+  resultsTitle: document.getElementById('resultsTitle'), // ADDED: Fix for search title error
   resultsGrid: document.getElementById('resultsGrid'),
   watchlistGrid: document.getElementById('watchlistGrid'),
   detailsModal: new bootstrap.Modal(document.getElementById('detailsModal'), { keyboard: true })
