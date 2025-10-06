@@ -2,7 +2,6 @@
 // Initializes the app, sets up routing, theme, and event listeners.
 // Uses ES Modules for organization. No external JS libraries.
 
-import { TMDB_API_KEY, YOUTUBE_API_KEY } from './config.js';
 import { fetchGenres, fetchTrending, fetchSearch, fetchDetails, fetchTrailer } from './modules/api.js';
 import { initSearch, handleSearch } from './modules/search.js';
 import { RecommendationEngine } from './modules/recommendations.js';
@@ -13,6 +12,8 @@ import { debounce, updateTitle, formatDate, getGenresFromIds } from './modules/u
 
 // Constants
 const API_BASE = 'https://api.themoviedb.org/3';
+const TMDB_API_KEY = 'cc5b03af4538b3527eff9204276833b2'; // Replace with your TMDb API key
+const YOUTUBE_API_KEY = 'AIzaSyDG3nKGapSyNFBSTutxRrlETPEA-soffWE';
 const IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
 // Global State
